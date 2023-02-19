@@ -1,0 +1,53 @@
+    Tu dong tang kich thuoc cua vector khi nhap phan tu vao
+    
+    push_back(): them phan tu vao cuoi vector
+    pop_back(): xoa phan tu cuoi vector
+
+    v.front(): tra ve phan tu dau vector
+    v.back(): tra ve phan tu cuoi cung vector
+
+    size()
+
+    truy cap thong qua chi so 
+
+    Duyet for / foreach / iterator (con tro) / auto
+        %     for (int i = 0; i< v.size(); i++){
+        %     cout << v[i] << endl;
+        % }
+
+        %     for(int x : v){
+        %     cout << x << endl;
+        % }
+
+        %     for (vector<int>::iterator it = v.begin(); it != v.end(); it++){
+        %     cout << *it << endl;
+        % }
+
+        %     for (auto it = v.begin(); it != v.end(); it++){
+        %     cout << *it << endl;
+        % }
+
+    v.end(): kp la phan tu cuoi cua vector v, no o sau phan tu cuoi cung
+
+    v[2] ~ *(v.begin() + 2)
+
+    Co hai cach nhap gia tri cho mang vector:
+        + Cach 1: co the nhap truc tiep trong for nhu mang binh thuong
+            vector<int> v(n);  voi n la so luong phan tu 
+            for(int i = 0; i <n ; i++){
+                cin >> v[i];
+            }
+        + Cach 2: thong qua 1 bien tam
+            vector<int> v;
+            for(int i = 0; i <n ; i++){
+                int x;
+                cin >> x;
+                v.push_back(x);
+            }
+    
+    Khai bao mang vector co gia tri duoc chi dinh:  vector<int> v(n, 100);
+
+    Co thay thay doi kich thuoc cua vector khi da co cac gia tri ben trong
+        v.resize(value);
+
+    Trong hàm xóa các phần tử, lý do mà r + 1 là bởi vì nó sẽ xóa được cả phần tử có vị trí r

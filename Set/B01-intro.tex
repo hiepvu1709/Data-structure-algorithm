@@ -1,0 +1,46 @@
+    Cac thao tac cua set deu co do phuc tap la O(logn)
+
+    Cau truc du lieu set se co thu tu khi them du lieu vao (hieu nom na la no duoc sap xep luon theo thu tu tang dan khi them phan tu vao mang). Nhu vay se thuan tien trong viec tim kiem va xoa
+        - Doi voi so thi se sap xep theo thu tu tang dan
+        - Doi voi chuoi thi se sap xep theo thu tu tu dien tang dan
+
+    Set se k luu cac phan tu co gia tri trung nhau, cac phan tu trong set day phai la rieng biet
+
+    insert(): Them mot phan tu vao trong set
+
+    size(): tra ve so luong phan tu cua set
+
+    find(5): sẽ trả về con trỏ đến ptử có giá trị bằng với giá trị tìm kiếm nếu ptử đó tồn tại trong tập hợp
+        - Nếu ptử số 5 tồn tại trong tập hợp s, con trỏ trả về bởi hàm find() sẽ khác với con trỏ trỏ đến phần tử cuối cùng của tập hợp (s.end()), và đk s.find(5) != s.end() là đúng (true).
+        - Ngược lại, nếu ptử số 5 k tồn tại trong tập hợp s, con trỏ trả về bởi hàm find() sẽ bằng với con trỏ trỏ đến ptử cuối cùng của tập hợp (s.end()), và đk s.find(5) != s.end() là sai (false). 
+
+    count(5): kiem tra xem phan tu co ton tai trong set hay khong
+        - Neu ton tai, ham count se tra ve gia tri khac 0
+        - Khong ton tai, ham count se tra ve gia tri 0
+
+    Erase()
+
+    O trong set , iterator tro den phan tu dau tien trong set la s.begin()
+    Muon truy cap phan tu dau tien ta lam nhu sau: 
+        cout << *s.begin() ;
+    
+    Co 2 cach de truy cap vao phan tu cuoi cung trong Set
+        cout << *s.end() - 1 << endl;
+        cout << *s.rbegin() << endl;
+
+    Duyet set
+        - foreach
+            for(int x : s){
+                cout << x << " ";
+            }
+        - auto
+            for(auto x : s){
+                cout << x << " ";
+            }
+        - iterator
+            for(set<int>::iterator it = s.begin(); it != s.end(); it++){
+                cout << *it << " ";
+            }
+        - Duyet set theo thu tu nguoc lai:
+             for(auto it = se.rbegin(); it != se.rend(); ++it)
+                cout << *it << ' ';
